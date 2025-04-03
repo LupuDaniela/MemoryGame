@@ -1,4 +1,5 @@
 🧩 Gaia's Echoes Memory Game Application
+
 Acest proiect este o aplicație de joc de memorie WPF în C#, inspirată din jocurile clasice de potrivire a perechilor de cărți. Aplicația pune la încercare memoria jucătorilor printr-un gameplay dinamic, setări personalizabile și gestionarea profilurilor.
 
 📌 Funcționalități
