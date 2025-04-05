@@ -1,0 +1,183 @@
+﻿<Window x:Class="MemoryGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MemoryGame"
+        xmlns:services="clr-namespace:MemoryGame.Services"
+        xmlns:viewModel="clr-namespace:MemoryGame.ViewModel"
+        Title="Sign In" 
+        Height="800" 
+        Width="1200"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="CanResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/BackrgoundSignInBun-Photoroom.png" Stretch="UniformToFill"/>
+    </Window.Background>
+    <Window.DataContext>
+        <viewModel:UserViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <services:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+                    Background="{TemplateBinding Background}" 
+                    BorderBrush="White" 
+                    BorderThickness="1" 
+                    CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="Bookman Old Style"/>
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#324E4A"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <ListBox x:Name="userListBox"
+               ItemsSource="{Binding Users}"
+               SelectedItem="{Binding SelectedUser, Mode=TwoWay}"
+               Background="Transparent"
+               BorderBrush="Transparent"
+               Margin="192,209,54,46">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Username}"
+                       Foreground="White"
+                       FontFamily="Bookman Old Style"
+                       FontSize="20"/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <Grid Grid.Column="1" HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="-220,80,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid x:Name="NewUserCreationPanel"
+              Visibility="{Binding IsImageSelectionVisible, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <StackPanel HorizontalAlignment="Center">
+                        <TextBlock Text="New Player"
+                       FontSize="20"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       Margin="0,120,0,5"
+                       HorizontalAlignment="Center"/>
+                        <Grid HorizontalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0"
+                      Content="&lt;"
+                      Width="30"
+                      Command="{Binding PreviousImageCommand}"
+                      Margin="0,0,10,0"/>
+                            <Border Grid.Column="1"
+                      CornerRadius="5"
+                      Background="#84AAA5"
+                      Padding="5">
+                                <Image Source="{Binding NewUserImagePath}"
+                       Width="100"
+                       Height="150"
+                       Stretch="Uniform"/>
+                            </Border>
+                            <Button Grid.Column="2"
+                      Content="&gt;"
+                      Width="30"
+                      Command="{Binding NextImageCommand}"
+                      Margin="10,0,0,0"/>
+                        </Grid>
+                        <TextBox Width="200"
+                     HorizontalAlignment="Center"
+                     FontFamily="Bookman Old Style"
+                     FontSize="16"
+                     Margin="10"
+                     Text="{Binding NewUsername, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Content="Add User"
+                    Command="{Binding ConfirmAddUserCommand}"
+                    Width="90"
+                    FontSize="14"
+                    Margin="0,30,0,0"
+                    HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="SelectedUserImagePanel"
+              Visibility="{Binding ShowPhoto, Converter={StaticResource BooleanToVisibilityConverter}}">
+                    <Border Padding="5" Margin="-10,129,10,-81">
+                        <Border.Style>
+                            <Style TargetType="Border">
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ShowPhoto}" Value="True">
+                                        <Setter Property="Background" Value="#84AAA5"/>
+                                        <Setter Property="CornerRadius" Value="10"/>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Border.Style>
+                        <Image x:Name="selectedUserProfileImage"
+                   Source="{Binding SelectedUser.ProfileImagePath}"
+                   Stretch="Uniform"
+                   Width="200"
+                   Height="200"/>
+                    </Border>
+                </Grid>
+            </Grid>
+        </Grid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <Button Content="New User" 
+              Width="90" 
+              Margin="0,0,10,0" 
+              FontFamily="Bookman Old Style" 
+              FontSize="14" 
+              Command="{Binding ToggleNewUserPanelCommand}"/>
+            <Button Content="Delete User" 
+              Width="90" 
+              Margin="0,0,10,0" 
+              FontFamily="Bookman Old Style" 
+              FontSize="14" 
+              IsEnabled="{Binding IsDeleteUserEnabled}" 
+              Command="{Binding DeleteUserCommand}"/>
+            <Button Content="Play" 
+              Width="80" 
+              Margin="0,0,10,0" 
+              FontFamily="Bookman Old Style" 
+              FontSize="14" 
+              IsEnabled="{Binding IsPlayEnabled}" 
+              Command="{Binding PlayCommand}" Click="Play_Click"/>
+            <Button Content="Load Game" Click="LoadGame_Click" Width="90" FontFamily="Bookman Old Style" FontSize="14" Margin="0,0,10,0"  />
+            <Button Content="Statistics" Click="Statistics_Click" Width="90" FontFamily="Bookman Old Style" FontSize="14" Margin="0,0,10,0"  />
+            <Button Content="Back" 
+              Width="80" 
+              FontFamily="Bookman Old Style" 
+              FontSize="14" 
+              Margin="0,0,10,0" 
+              Click="Back_Click"/>
+            <Button Content="Cancel" 
+              Width="80" 
+              FontFamily="Bookman Old Style" 
+              FontSize="14" 
+              Command="{Binding CancelCommand}"/>
+        </StackPanel>
+    </Grid>
+</Window>

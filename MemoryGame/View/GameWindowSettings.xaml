@@ -1,0 +1,113 @@
+﻿<Window x:Class="MemoryGame.View.GameWindowSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Game Settings" Height="500" Width="450" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/Images/BGcategories.png"
+        Stretch="UniformToFill" />
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border"
+            Background="{TemplateBinding Background}" 
+            BorderBrush="White" 
+            BorderThickness="1" 
+            CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" 
+                        VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="FontFamily" Value="Bookman Old Style"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#324E4A"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Select Card Images" Foreground="White" Grid.Row="0" Margin="0,0,0,10" Background="Transparent">
+            <ListBox x:Name="lstCategories" SelectionMode="Single" HorizontalAlignment="Center"  Background="Transparent">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemContainerStyle>
+                    <Style TargetType="ListBoxItem">
+                        <Setter Property="Margin" Value="5"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="ListBoxItem">
+                                    <Border x:Name="Bd" BorderThickness="2" CornerRadius="5" Padding="5" BorderBrush="Transparent">
+                                        <ContentPresenter/>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter TargetName="Bd" Property="BorderBrush" Value="Gold"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </ListBox.ItemContainerStyle>
+                <ListBoxItem Tag="Delights">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/greek-delights.png" Width="100" Height="130"/>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Tag="Statues">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/greek-statues.png" Width="100" Height="130"/>
+                    </StackPanel>
+                </ListBoxItem>
+                <ListBoxItem Tag="Islands">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Images/greek-islands.png" Width="100" Height="130"/>
+                    </StackPanel>
+                </ListBoxItem>
+            </ListBox>
+        </GroupBox>
+
+        <GroupBox Header="Board Size" Grid.Row="1" Margin="0,0,0,10" Foreground="White">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <RadioButton x:Name="rbStandard" Content="Standard (4×4)" Foreground="White"  GroupName="BoardSize" Checked="rbStandard_Checked"/>
+                <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                    <RadioButton x:Name="rbCustom" Content="Custom:" Foreground="White" GroupName="BoardSize" Checked="rbCustom_Checked"/>
+                    <TextBox x:Name="txtRows" Width="40" Margin="5,0,0,0" Foreground="White" Background="Transparent" IsEnabled="False" Text="4"/>
+                    <TextBlock Text="x" Foreground="White" VerticalAlignment="Center" Margin="5,0"/>
+                    <TextBox x:Name="txtColumns" Foreground="White" Background="Transparent" Width="40" Margin="5,0,0,0" IsEnabled="False" Text="4"/>
+                </StackPanel>
+                <TextBlock Text="(Choose numbers between 2 and 6, the total number of cards must be even)" 
+                   FontSize="10" Foreground="White" Margin="0,5,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox Header="Timer Settings" Grid.Row="2" Margin="0,0,0,10" Foreground="White">
+            <StackPanel Orientation="Vertical" Margin="10">
+                <RadioButton x:Name="rb45Seconds" Content="45 Seconds" Foreground="White" IsChecked="True" GroupName="TimerGroup"/>
+                <RadioButton x:Name="rb1Minute" Content="1 Minute" Foreground="White" GroupName="TimerGroup"/>
+                <RadioButton x:Name="rb2Minutes" Content="2 Minutes" Foreground="White" GroupName="TimerGroup"/>
+                <RadioButton x:Name="rb3Minutes" Content="3 Minutes" Foreground="White" GroupName="TimerGroup"/>
+            </StackPanel>
+        </GroupBox>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="OK" Width="80" Margin="5" Click="Ok_Click"/>
+            <Button Content="Cancel" Width="80" Margin="5" Click="Cancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

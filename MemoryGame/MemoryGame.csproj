@@ -8,4 +8,297 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\BackOfTheCard.png" />
+    <None Remove="Images\BackrgoundBun-Photoroom.png" />
+    <None Remove="Images\BackrgoundFaraTitlu-Photoroom.jpg" />
+    <None Remove="Images\BackrgoundSignIn-Photoroom.png" />
+    <None Remove="Images\BGcategories.png" />
+    <None Remove="Images\Delights\Boug.png" />
+    <None Remove="Images\Delights\Briam.png" />
+    <None Remove="Images\Delights\Calamari.png" />
+    <None Remove="Images\Delights\Dolma.png" />
+    <None Remove="Images\Delights\GreekSalad.png" />
+    <None Remove="Images\Delights\Gyros.png" />
+    <None Remove="Images\Delights\Keftedes.png" />
+    <None Remove="Images\Delights\Loukou.png" />
+    <None Remove="Images\Delights\Mousaka.png" />
+    <None Remove="Images\Delights\Olives.png" />
+    <None Remove="Images\Delights\Pastourm.png" />
+    <None Remove="Images\Delights\Porto.png" />
+    <None Remove="Images\Delights\Saganaki.png" />
+    <None Remove="Images\Delights\Souvlaki.png" />
+    <None Remove="Images\Delights\Spanakopita.png" />
+    <None Remove="Images\Delights\Stifado.png" />
+    <None Remove="Images\Delights\Taramosalata.png" />
+    <None Remove="Images\Delights\Tzatziki.png" />
+    <None Remove="Images\greek-delights.png" />
+    <None Remove="Images\greek-islands.png" />
+    <None Remove="Images\greek-statues.png" />
+    <None Remove="Images\Islands\Alonissos.png" />
+    <None Remove="Images\Islands\Chios.png" />
+    <None Remove="Images\Islands\Corfu.png" />
+    <None Remove="Images\Islands\Crete.png" />
+    <None Remove="Images\Islands\Ithaca.png" />
+    <None Remove="Images\Islands\Kos.png" />
+    <None Remove="Images\Islands\Lefkada.png" />
+    <None Remove="Images\Islands\Milos.png" />
+    <None Remove="Images\Islands\Mykonos.png" />
+    <None Remove="Images\Islands\Naxos.png" />
+    <None Remove="Images\Islands\Paros.png" />
+    <None Remove="Images\Islands\Rhodes.png" />
+    <None Remove="Images\Islands\Santorini.png" />
+    <None Remove="Images\Islands\Serifos.png" />
+    <None Remove="Images\Islands\Skiathos.png" />
+    <None Remove="Images\Islands\Syros.png" />
+    <None Remove="Images\Islands\Thasos.png" />
+    <None Remove="Images\Islands\Zakynthos.png" />
+    <None Remove="Images\Players\Aphrodite-removebg-preview.png" />
+    <None Remove="Images\Players\Apollo-removebg-preview.png" />
+    <None Remove="Images\Players\Ares-removebg-preview.png" />
+    <None Remove="Images\Players\Artemis-removebg-preview.png" />
+    <None Remove="Images\Players\Demeter-removebg-preview.png" />
+    <None Remove="Images\Players\Hades-removebg-preview.png" />
+    <None Remove="Images\Players\Hera-removebg-preview.png" />
+    <None Remove="Images\Players\Zeus-removebg-preview.png" />
+    <None Remove="Images\Statues\Aphrodite.png" />
+    <None Remove="Images\Statues\Artemision.png" />
+    <None Remove="Images\Statues\Biton.png" />
+    <None Remove="Images\Statues\Charioteer.png" />
+    <None Remove="Images\Statues\Disc.png" />
+    <None Remove="Images\Statues\Gaul.png" />
+    <None Remove="Images\Statues\Group.png" />
+    <None Remove="Images\Statues\Hermes.png" />
+    <None Remove="Images\Statues\Kritios.png" />
+    <None Remove="Images\Statues\Lacoon.png" />
+    <None Remove="Images\Statues\Mosch.png" />
+    <None Remove="Images\Statues\Nike.png" />
+    <None Remove="Images\Statues\Peplos.png" />
+    <None Remove="Images\Statues\Phantenon.png" />
+    <None Remove="Images\Statues\RiaceBronze.png" />
+    <None Remove="Images\Statues\Venus.png" />
+    <None Remove="Images\Statues\Youth.png" />
+    <None Remove="Images\Statues\Zeus.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\BackOfTheCard.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Zeus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\BackrgoundBun-Photoroom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BackrgoundFaraTitlu-Photoroom.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BackrgoundSignInBun-Photoroom.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\BGcategories.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Boug.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Briam.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Calamari.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Dolma.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\GreekSalad.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Gyros.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Keftedes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Loukou.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Mousaka.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Olives.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Pastourm.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Porto.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Saganaki.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Souvlaki.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Spanakopita.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Stifado.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Taramosalata.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Delights\Tzatziki.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\greek-delights.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\greek-islands.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\greek-statues.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Alonissos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Chios.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Corfu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Crete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Ithaca.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Kos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Lefkada.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Milos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Mykonos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Naxos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Paros.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Rhodes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Santorini.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Serifos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Skiathos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Syros.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Thasos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Islands\Zakynthos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Aphrodite-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Apollo-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Ares-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Artemis-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Demeter-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Hades-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Hera-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Players\Zeus-removebg-preview.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Aphrodite.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Artemision.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Biton.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Charioteer.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Disc.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Gaul.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Group.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Hermes.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Kritios.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Lacoon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Mosch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Nike.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Peplos.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Phantenon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\RiaceBronze.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Venus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\Statues\Youth.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
 </Project>
